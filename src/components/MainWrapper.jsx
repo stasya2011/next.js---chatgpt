@@ -9,7 +9,7 @@ const MainWrapper = ({children}) => {
     const {Header} = Layout;
     return (
         <Layout style={{width: 800, margin: "0 auto"}}>
-            <Header style={{marginBottom: 20}}>
+            <Header style={{marginBottom: 20, position: "sticky", top: 0}}>
                 <Link style={{marginRight: 20, color: "white"}} href={"/about"}>About</Link>
                 <Link style={{marginRight: 20, color: "white"}} href={"/game"}>Game</Link>
                 <Link style={{marginRight: 20, color: "white"}} href={"/"}>Chat</Link>

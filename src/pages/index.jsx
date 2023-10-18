@@ -24,7 +24,6 @@ export default function Home({ repo }) {
       { role: "user", content: prompt },
       { role: "assistant", content: result.choices[0].message.content },
     ]);
-
     setChoices(result.choices);
   };
 
@@ -38,14 +37,14 @@ export default function Home({ repo }) {
   useEffect(() => {
     const a = JSON.parse(localStorage.getItem("chat-gpt"));
 
-    if (!!a.length) {
+    if (a && a.length) {
       setMessages([...a]);
     }
   }, []);
 
   return (
     <MainWrapper className={styles.main}>
-      <PromptForm onSubmitForm={onSubmitForm} />
+      
       <div
         style={{
           display: "flex",
@@ -77,6 +76,7 @@ export default function Home({ repo }) {
           )
         )}
       </div>
+      <PromptForm onSubmitForm={onSubmitForm} />
     </MainWrapper>
   );
 }
