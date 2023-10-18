@@ -1,0 +1,17 @@
+.form {
+    width: calc(800px - 20px * 2);
+    padding: 10;
+    margin: 0 auto;
+
+    input[type="submit"] {
+        margin-bottom: 10px;
+    }
+}
+
+.input {
+    width: calc(100% - 20px * 2);
+    font-size: 1.4rem;
+    padding: 1rem;
+    margin-bottom: 10px;
+    display: block;
+}
